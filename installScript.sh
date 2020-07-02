@@ -17,6 +17,11 @@ xset r rate 180
 # uim & byeoru, for korean
 sudo apt install -y uim 
 
+# install imwheel
+# https://minjejeon.github.io/learningstock/2016/07/08/change-mouse-wheel-speed-using-imwheel.html
+# https://devlog.jwgo.kr/2019/01/31/imwheel-and-what-is-X11/
+sudo apt-get install imwheel
+
 #========================================
 
 # build-essential
