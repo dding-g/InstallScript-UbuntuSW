@@ -20,7 +20,7 @@ sudo apt install -y uim
 # install imwheel
 # https://minjejeon.github.io/learningstock/2016/07/08/change-mouse-wheel-speed-using-imwheel.html
 # https://devlog.jwgo.kr/2019/01/31/imwheel-and-what-is-X11/
-sudo apt-get install imwheel
+sudo apt-get install -y imwheel
 
 #========================================
 
@@ -64,7 +64,7 @@ sudo snap install -y slack --classic
 #========================================
 
 #intellij-ultimate
-sudo snap install intellij-idea-ultimate --classic
+sudo snap install -y intellij-idea-ultimate --classic
 
 #vscode
 sudo sh -c 'curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/trusted.gpg.d/microsoft.gpg'
