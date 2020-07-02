@@ -14,6 +14,9 @@ git config --global user.name "ddingg"
 #keyboard input rate
 xset r rate 180
 
+# uim & byeoru, for korean
+sudo apt install -y uim uim-byeoru
+
 #========================================
 
 # build-essential
@@ -34,8 +37,8 @@ sudo systemctl start docker
 #Chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-sudo apt-get update
-sudo apt-get install google-chrome-stable
+sudo apt-get update -y
+sudo apt-get install -y google-chrome-stable
 ls /etc/apt/sources.list.d/google*
 sudo rm -rf /etc/apt/sources.list.d/google.list
 
@@ -46,7 +49,7 @@ sudo apt-get update -y
 sudo apt-get install -y typora
 
 #Slack
-sudo snap install slack --classic
+sudo snap install -y slack --classic
 
 #TLP : battery optimization on laptop (If you install ubuntu on laptop NOT Desktop) 
 #sudo add-apt-repository ppa:linrunner/tlp # 저장소 추가
@@ -82,9 +85,16 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 #zsh-better-npm-completion
 git clone https://github.com/lukechilds/zsh-better-npm-completion ~/.oh-my-zsh/custom/plugins/zsh-better-npm-completion --depth=1
 
+#Powerline font
+wget https://github.com/powerline/fonts/raw/master/UbuntuMono/Ubuntu%20Mono%20derivative%20Powerline.ttf
+wget https://github.com/powerline/fonts/raw/master/UbuntuMono/Ubuntu%20Mono%20derivative%20Powerline%20Italic.ttf
+wget https://github.com/powerline/fonts/raw/master/UbuntuMono/Ubuntu%20Mono%20derivative%20Powerline%20Bold.ttf
+wget https://github.com/powerline/fonts/raw/master/UbuntuMono/Ubuntu%20Mono%20derivative%20Powerline%20Bold%20Italic.ttf
+
 cd ..
 mv zshrc ~/.zshrc
 source ~/.zshrc
 
 sudo apt-get update -y
 sudo apt-get upgrade -y
+                             
