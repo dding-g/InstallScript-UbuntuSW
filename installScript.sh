@@ -4,15 +4,15 @@
 sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 #========================================
 
-#keyboard input rate
-xset r rate 180
-
 sudo apt update -y
 sudo apt install -y vim git curl gnome-tweaks
 sudo apt upgrade -y
 sudo apt autoremove -y
 git config --global user.email "area409@gmail.com"
 git config --global user.name "ddingg"
+
+#keyboard input rate
+xset r rate 180
 
 #========================================
 
@@ -85,3 +85,6 @@ git clone https://github.com/lukechilds/zsh-better-npm-completion ~/.oh-my-zsh/c
 cd ..
 mv zshrc ~/.zshrc
 source ~/.zshrc
+
+sudo apt-get update -y
+sudo apt-get upgrade -y
