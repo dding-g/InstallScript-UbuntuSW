@@ -15,7 +15,7 @@ git config --global user.name "ddingg"
 xset r rate 180
 
 # uim & byeoru, for korean
-sudo apt install -y uim uim-byeoru
+sudo apt install -y uim 
 
 #========================================
 
@@ -93,8 +93,24 @@ wget https://github.com/powerline/fonts/raw/master/UbuntuMono/Ubuntu%20Mono%20de
 
 cd ..
 mv zshrc ~/.zshrc
-source ~/.zshrc
+source ~/.zshrc # attach zsh setting
 
+#========================================
+
+#key mapping
+
+# 오른쪽 Alt키의 기본 키 맵핑을 제거하고 'Hangul'키로 맵핑
+xmodmap -e 'remove mod1 = Alt_R'
+xmodmap -e 'keycode 108 = Hangul'
+
+# 오른쪽 Ctrl키의 기본 키 맵핑을 제거하고 'Hangul_Hanja'키로 맵핑
+xmodmap -e 'remove control = Control_R'
+xmodmap -e 'keycode 105 = Hangul_Hanja'
+
+# 키 맵핑 저장
+xmodmap -pke > ~/.Xmodmap
+
+#========================================
 sudo apt-get update -y
 sudo apt-get upgrade -y
                              
