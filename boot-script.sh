@@ -1,3 +1,6 @@
+#keyboard rate
+xset r rate 180
+
 #key mapping
 #Hangul key mapping. right ALT_key to Hangul
 
