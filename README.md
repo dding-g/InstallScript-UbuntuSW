@@ -1,4 +1,4 @@
-# ubuntuInstallScript
+# Ubuntu Software Install Script
 After Ubuntu 18.04 install, Install packages what I needs.
 
 This is scripts for people who first install Ubuntu. or who don't want to install software by myself.   
