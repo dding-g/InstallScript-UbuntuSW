@@ -8,8 +8,8 @@ sudo apt update -y
 sudo apt install -y vim git curl gnome-tweaks
 sudo apt upgrade -y
 sudo apt autoremove -y
-git config --global user.email "area409@gmail.com"
-git config --global user.name "ddingg"
+git config --global user.email ""
+git config --global user.name ""
 
 #keyboard input rate
 xset r rate 180
