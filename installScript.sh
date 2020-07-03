@@ -56,6 +56,47 @@ sudo apt-get install -y typora
 #Slack
 sudo snap install -y slack --classic
 
+#KaKaoTalk and Wine
+# korean font
+sudo apt-get install fonts-nanum
+
+# follow this blog : https://nixytrix.com/error-winehq-stable-depends-wine-stable-5-0-0-bionic/
+sudo dpkg --add-architecture i386
+wget -nc https://dl.winehq.org/wine-builds/winehq.key -O /tmp/winehq.key
+sudo apt-key add /tmp/winehq.key
+sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+wget -nv https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/Release.key -O /tmp/Release.key
+sudo apt-key add - < /tmp/Release.key
+sudo apt-add-repository 'deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/ ./'
+sudo apt-get update
+sudo apt install --install-recommends winehq-stable
+
+# reset wine setting 
+# windows version : XP -> OK
+WINEARCH=win32 winecfg
+
+#install winetricks
+sudo apt install winetricks
+
+#install winetricks moodule
+winetricks gdiplus_winxp msxml6 riched30 riched20 wmp9 d3dx9_43
+
+#Download kakaoTalk.exe
+wget http://app.pc.kakao.com/talk/win32/xp/KakaoTalk_Setup.exe
+
+# 카톡 설치법은 https://lucidmaj7.tistory.com/159 여기를 참고해 주세요.
+# kakaotalk install : https://lucidmaj7.tistory.com/159 on bottom side.
+wine KaKaoTalk_Setup.exe
+
+# install Extensions for tray.
+# 1. restart gnome-shell.
+# 2. go to Tweaks/Extension.
+# 3. turn on Topicons plus.
+# 4. you can see kakao icon on top bar center.
+# 5. you can setting anywhere in Topicons plus setting.
+sudo apt install gnome-shell-extension-top-icons-plus
+
+
 #TLP : battery optimization on laptop (If you install ubuntu on laptop NOT Desktop) 
 #sudo add-apt-repository ppa:linrunner/tlp # 저장소 추가
 #sudo apt install tlp tlp-rdw -y # 패키지 설치
