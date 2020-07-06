@@ -31,7 +31,7 @@ sudo apt-get install -y build-essential
 sudo apt-get install -y openjdk-11-jdk
 
 #Docker
-sudo apt install -y ap-transport-https ca-certificates curl software-properties-common
+sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 sudo apt update -y
