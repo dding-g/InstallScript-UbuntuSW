@@ -36,3 +36,4 @@ This script install almost automatically that those software.
 The Settings that `Separate setting is required` is on `intallScript.sh`
 
 ### What to do in `boot-script.sh`
+* Mapping Hangul-key to Ubuntu
